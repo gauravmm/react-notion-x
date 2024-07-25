@@ -45,6 +45,8 @@ export interface NotionContext {
 }
 
 export interface PartialNotionContext {
+  children?: React.ReactNode
+
   recordMap?: ExtendedRecordMap
   components?: Partial<NotionComponents>
 

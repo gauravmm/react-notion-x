@@ -1,14 +1,6 @@
+import { add, format, getDate, getDay, getHours, getMinutes, getMonth, getYear, intervalToDuration, sub } from 'date-fns'
 import * as types from 'notion-types'
-import add from 'date-fns/add/index.js'
-import format from 'date-fns/format/index.js'
-import getDate from 'date-fns/getDate/index.js'
-import getDay from 'date-fns/getDay/index.js'
-import getHours from 'date-fns/getHours/index.js'
-import getMinutes from 'date-fns/getMinutes/index.js'
-import getMonth from 'date-fns/getMonth/index.js'
-import getYear from 'date-fns/getYear/index.js'
-import intervalToDuration from 'date-fns/intervalToDuration/index.js'
-import sub from 'date-fns/sub/index.js'
+
 import { getDateValue, getTextContent } from 'notion-utils'
 
 export interface EvalFormulaContext {

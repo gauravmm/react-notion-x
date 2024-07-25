@@ -1,8 +1,8 @@
 import * as React from 'react'
 
-import * as types from 'notion-types'
-import format from 'date-fns/format/index.js'
+import { format } from 'date-fns'
 import formatNumber from 'format-number'
+import * as types from 'notion-types'
 import { FormulaResult } from 'notion-types'
 
 import { Checkbox } from '../components/checkbox'
@@ -320,7 +320,7 @@ export const PropertyImpl: React.FC<IPropertyProps> = (props) => {
         //   properties: block?.properties
         // })
 
-        content = components.propertyFormulaValue(props, renderFormulaValue)
+        content = components.propertyFormulaValue(props, () => renderFormulaValue().toString())
         break
 
       case 'title':

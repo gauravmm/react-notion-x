@@ -23,7 +23,6 @@
   },
   "dependencies": {
     "@fisch0920/medium-zoom": "^1.0.7",
-    "@matejmazur/react-katex": "^3.1.3",
     "katex": "^0.16.11",
     "notion-types": "^6.16.1",
     "notion-utils": "^6.16.1",
@@ -31,6 +30,7 @@
     "react-fast-compare": "^3.2.2",
     "react-hotkeys-hook": "^4.5.0",
     "react-image": "^4.1.0",
+    "react-katex": "^3.0.1",
     "react-modal": "^3.16.1",
     "react-pdf": "^9.1.0",
     "react-use": "^17.5.1"
@@ -39,6 +39,7 @@
     "@types/lodash.throttle": "^4.1.9",
     "@types/node": "^20.14.12",
     "@types/react": "^18.3.3",
+    "@types/react-katex": "^3.0.4",
     "clipboard-copy": "^4.0.1",
     "date-fns": "^3.6.0",
     "format-number": "^3.0.0",

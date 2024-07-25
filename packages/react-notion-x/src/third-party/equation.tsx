@@ -1,26 +1,25 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import Katex from '@matejmazur/react-katex'
-import { EquationBlock } from 'notion-types'
-import { getBlockTitle } from 'notion-utils'
+import { InlineMath, BlockMath } from 'react-katex';
+import 'katex/dist/katex.min.css';
+import { EquationBlock } from 'notion-types';
+import { getBlockTitle } from 'notion-utils';
 
-import { useNotionContext } from '../context'
-import { cs } from '../utils'
+import { useNotionContext } from '../context';
+import { cs } from '../utils';
 
-const katexSettings = {
-  throwOnError: false,
-  strict: false
-}
 
 export const Equation: React.FC<{
   block: EquationBlock
   math?: string
   inline?: boolean
   className?: string
-}> = ({ block, math, inline = false, className, ...rest }) => {
+}> = ({ block, math, inline = false, className }) => {
   const { recordMap } = useNotionContext()
   math = math || getBlockTitle(block, recordMap)
   if (!math) return null
+
+  const TeX = inline ? InlineMath : BlockMath
 
   return (
     <span
@@ -32,7 +31,7 @@ export const Equation: React.FC<{
         className
       )}
     >
-      <Katex math={math} settings={katexSettings} {...rest} />
+      <TeX math={math} />
     </span>
   )
 }
