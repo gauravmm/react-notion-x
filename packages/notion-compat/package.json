@@ -24,10 +24,10 @@
   "dependencies": {
     "notion-types": "^6.16.1",
     "notion-utils": "^6.16.1",
-    "p-queue": "^7.2.0"
+    "p-queue": "^8.0.1"
   },
   "devDependencies": {
-    "@notionhq/client": "^1.0.4",
+    "@notionhq/client": "^2.2.15",
     "notion-client": "^6.16.1"
   },
   "peerDependencies": {
