@@ -1,4 +1,3 @@
-// import { promises as fs } from 'fs'
 import * as notion from 'notion-types'
 import got, { OptionsOfJSONResponseBody } from 'got'
 import {
@@ -393,15 +392,15 @@ export class NotionAPI {
           const iteratorProps =
             iterator === 'results'
               ? {
-                  type: iterator,
-                  limit
-                }
+                type: iterator,
+                limit
+              }
               : {
-                  type: 'aggregation',
-                  aggregation: {
-                    aggregator: 'count'
-                  }
+                type: 'aggregation',
+                aggregation: {
+                  aggregator: 'count'
                 }
+              }
 
           const isUncategorizedValue = typeof value === 'undefined'
           const isDateValue = value?.range
@@ -409,8 +408,8 @@ export class NotionAPI {
           const queryLabel = isUncategorizedValue
             ? 'uncategorized'
             : isDateValue
-            ? value.range?.start_date || value.range?.end_date
-            : value?.value || value
+              ? value.range?.start_date || value.range?.end_date
+              : value?.value || value
 
           const queryValue =
             !isUncategorizedValue && (isDateValue || value?.value || value)
